@@ -3,13 +3,15 @@ import CRTWarp from '../components/CRTWarp'
 import ProfileHeader from '../components/ProfileHeader'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { DividerStrip } from '../components/Shared'
+
 
 export default function ProfileLayout() {
   return (
     <div className="relative min-h-screen text-white">
       <div className="fixed inset-0 z-0 pointer-events-none">
         <CRTWarp
-          color="#d8d4ca"
+          color="#f5f5f2"
           backgroundColor="#050505"
           speed={0.5}
           curvature={0.25}
@@ -35,26 +37,20 @@ export default function ProfileLayout() {
         <div
           className="min-h-screen"
           style={{
-            background: '#090909',
-            borderLeft: '1px solid rgba(216,212,202,0.14)',
-            borderRight: '1px solid rgba(216,212,202,0.14)',
+            background: 'var(--p3-panel)',
+            borderLeft: '1px solid var(--p3-line)',
+            borderRight: '1px solid var(--p3-line)',
           }}
         >
           <ProfileHeader />
           <Navbar />
-          <div
-            className="h-8 w-full"
-            style={{
-              borderBottom: '1px solid rgba(216,212,202,0.14)',
-              backgroundImage:
-                'repeating-linear-gradient(135deg,rgba(216,212,202,0.07) 0,rgba(216,212,202,0.07) 1px,transparent 1px,transparent 8px)',
-            }}
-          />
+          <DividerStrip />
 
           <main id="main" tabIndex={-1}>
             <Outlet />
           </main>
 
+          <DividerStrip />
           <Footer />
         </div>
       </div>

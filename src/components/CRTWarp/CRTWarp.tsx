@@ -149,7 +149,7 @@ void main() {
 `;
 
 export default function CRTWarp({
-  color = '#d8d4ca',
+  color = '#f5f5f2',
   backgroundColor = '#050505',
   speed = 0.5,
   curvature = 0.25,
@@ -205,7 +205,7 @@ export default function CRTWarp({
         uResolution: { value: new THREE.Vector2(1, 1) },
         uTime: { value: 0 },
         uSpeed: { value: 0.5 },
-        uColor: { value: new THREE.Color('#888097') },
+        uColor: { value: new THREE.Color('#f5f5f2') },
         uBackgroundColor: { value: new THREE.Color('#050505') },
         uCurvature: { value: 0.25 },
         uScanlineStrength: { value: 0.25 },

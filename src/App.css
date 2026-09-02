@@ -2,7 +2,7 @@
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
-  color: #d8d4ca;
+  color: var(--p3-cyan);
   background: var(--accent-bg);
   border: 2px solid transparent;
   transition: border-color 0.3s;
@@ -12,17 +12,60 @@
     border-color: rgba(216, 212, 202, 0.5);
   }
   &:focus-visible {
-    outline: 2px solid #d8d4ca;
+    outline: 2px solid var(--p3-cyan);
     outline-offset: 2px;
   }
 }
 
 .background-sticker img {
   aspect-ratio: 1;
-  border: 3px solid rgba(216, 212, 202, 0.75);
+  border: 3px solid var(--p3-cyan);
   border-radius: 50%;
-  box-shadow: 0 0 18px rgba(216, 212, 202, 0.35);
+  box-shadow: 0 0 18px var(--p3-glow);
   object-fit: cover;
+}
+
+.background-sticker {
+  position: fixed;
+  right: clamp(24px, 5vw, 72px);
+  bottom: 24px;
+  width: 4px;
+  height: 145px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.background-sticker__stick {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  height: 145px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  background: rgba(245, 245, 242, 0.72);
+}
+
+.background-sticker__mascot {
+  position: absolute;
+  left: 50%;
+  bottom: 125px;
+  width: 120px;
+  height: 120px;
+  transform: translateX(-50%);
+  transform-origin: 50% 100%;
+  border: 3px solid var(--p3-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 18px var(--p3-glow);
+  object-fit: cover;
+  pointer-events: auto;
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.background-sticker__mascot:active {
+  cursor: grabbing;
 }
 
 @media (max-width: 900px) {

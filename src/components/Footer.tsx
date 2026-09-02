@@ -10,7 +10,7 @@ const INDEX_LINKS = [
 
 export default function Footer() {
   return (
-    <footer style={{ borderTop: '1px solid rgba(216,212,202,0.14)' }}>
+    <footer style={{ borderTop: '1px solid var(--p3-line)' }}>
       <div className="relative overflow-hidden" style={{ height: '220px' }}>
         <img
           src={banner}
@@ -29,13 +29,13 @@ export default function Footer() {
           <div>
             <p
               className="mb-2 text-xs uppercase tracking-[0.22em]"
-              style={{ color: 'rgba(225,222,214,0.45)' }}
+              style={{ color: 'var(--p3-text-muted)' }}
             >
               Keep in touch
             </p>
             <h2
-              className="font-serif text-3xl italic"
-              style={{ color: '#e4e0d8' }}
+              className="text-3xl font-bold"
+              style={{ color: 'var(--p3-text)', fontFamily: 'var(--font-space)' }}
             >
               Let&apos;s build something useful.
             </h2>
@@ -46,23 +46,23 @@ export default function Footer() {
       <div className="grid gap-10 px-5 py-9 sm:grid-cols-[1.2fr_1fr_1fr] sm:px-6">
         <div>
           <p
-            className="font-serif text-lg italic"
-            style={{ color: 'rgba(225,222,214,0.8)' }}
+            className="text-lg font-bold"
+            style={{ color: 'var(--p3-text)', fontFamily: 'var(--font-space)' }}
           >
             alifanLeywin
           </p>
-          <p className="mt-2 text-sm" style={{ color: 'rgba(225,222,214,0.45)' }}>
+          <p className="mt-2 text-sm" style={{ color: 'var(--p3-text-muted)' }}>
             © 2026 Alfn Leywin
           </p>
-          <p className="mt-6 text-sm leading-relaxed" style={{ color: 'rgba(225,222,214,0.55)' }}>
+          <p className="mt-6 text-sm leading-relaxed" style={{ color: 'var(--p3-text-soft)' }}>
             Front-end developer based in Indonesia, building thoughtful digital experiences.
           </p>
         </div>
 
         <div>
           <h3
-            className="font-serif text-lg italic"
-            style={{ color: 'rgba(225,222,214,0.8)' }}
+            className="text-lg font-bold"
+            style={{ color: 'var(--p3-text)', fontFamily: 'var(--font-space)' }}
           >
             Contact
           </h3>
@@ -73,8 +73,8 @@ export default function Footer() {
                   href={social.href}
                   target={social.href.startsWith('http') ? '_blank' : undefined}
                   rel={social.href.startsWith('http') ? 'noreferrer' : undefined}
-                  className="text-sm transition-colors hover:text-[#e4e0d8]"
-                  style={{ color: 'rgba(225,222,214,0.52)' }}
+                  className="text-sm transition-colors hover:text-[#f5f5f2]"
+                  style={{ color: 'var(--p3-text-soft)' }}
                 >
                   {social.label}
                   <span aria-hidden="true"> ↗</span>
@@ -86,8 +86,8 @@ export default function Footer() {
 
         <div>
           <h3
-            className="font-serif text-lg italic"
-            style={{ color: 'rgba(225,222,214,0.8)' }}
+            className="text-lg font-bold"
+            style={{ color: 'var(--p3-text)', fontFamily: 'var(--font-space)' }}
           >
             Index
           </h3>
@@ -96,8 +96,8 @@ export default function Footer() {
               <li key={link.to}>
                 <Link
                   to={link.to}
-                  className="text-sm transition-colors hover:text-[#e4e0d8]"
-                  style={{ color: 'rgba(225,222,214,0.52)' }}
+                  className="text-sm transition-colors hover:text-[#f5f5f2]"
+                  style={{ color: 'var(--p3-text-soft)' }}
                 >
                   {link.label}
                 </Link>

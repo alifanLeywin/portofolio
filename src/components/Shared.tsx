@@ -13,21 +13,21 @@ export function Section({
   return (
     <section
       className="relative -mt-px"
-      style={{ border: '1px solid rgba(216,212,202,0.14)', borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}
+      style={{ border: '1px solid var(--p3-line)', borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}
     >
       <header
         className="px-4 py-3"
-        style={{ borderBottom: '1px solid rgba(216,212,202,0.12)' }}
+        style={{ borderBottom: '1px solid var(--p3-line-soft)' }}
       >
         <h2
-          className="font-semibold tracking-tight"
-          style={{ fontSize: '22px', color: 'rgba(225,222,214,0.9)', fontFamily: 'serif', fontStyle: 'italic' }}
+          className="font-bold tracking-tight"
+          style={{ fontSize: '22px', color: 'var(--p3-text)', fontFamily: 'var(--font-space)', fontStyle: 'normal' }}
         >
           {title}
           {count !== undefined && (
             <sup
               className="ml-1 not-italic"
-              style={{ fontSize: '12px', color: 'rgba(225,222,214,0.35)', fontFamily: 'system-ui', fontStyle: 'normal' }}
+              style={{ fontSize: '12px', color: 'var(--p3-text-muted)', fontFamily: 'var(--font-space)', fontStyle: 'normal' }}
             >
               ({count})
             </sup>
@@ -36,6 +36,20 @@ export function Section({
       </header>
       {children}
     </section>
+  )
+}
+
+export function DividerStrip() {
+  return (
+    <div
+      aria-hidden="true"
+      className="h-8 w-full"
+      style={{
+        borderBottom: '1px solid var(--p3-line)',
+        backgroundImage:
+          'repeating-linear-gradient(135deg,rgba(245,245,242,0.07) 0,rgba(245,245,242,0.07) 1px,transparent 1px,transparent 8px)',
+      }}
+    />
   )
 }
 
@@ -135,7 +149,7 @@ export function GlobeIcon() {
 }
 export function ArrowIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" width="16" height="16" style={{ flexShrink: 0, color: 'rgba(216,212,202,0.5)', marginTop: '2px' }}>
+    <svg viewBox="0 0 24 24" fill="none" width="16" height="16" style={{ flexShrink: 0, color: 'var(--p3-cyan)', marginTop: '2px' }}>
       <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )

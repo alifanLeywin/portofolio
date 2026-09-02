@@ -1,4 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 @import "tailwindcss";
+
+:root {
+  --font-space: 'Space Mono', monospace;
+  --p3-void: #050505;
+  --p3-panel: #090909;
+  --p3-panel-deep: #101010;
+  --p3-blue: #bcbcbc;
+  --p3-cyan: #f5f5f2;
+  --p3-cyan-soft: rgba(245, 245, 242, 0.12);
+  --p3-text: #f2f2ef;
+  --p3-text-soft: rgba(242, 242, 239, 0.72);
+  --p3-text-muted: rgba(242, 242, 239, 0.48);
+  --p3-line: rgba(245, 245, 242, 0.2);
+  --p3-line-soft: rgba(245, 245, 242, 0.12);
+  --p3-glow: rgba(245, 245, 242, 0.42);
+}
 
 /* ── Reset for profile page ── */
 *, *::before, *::after {
@@ -10,8 +27,8 @@ html, body {
   padding: 0;
   width: 100%;
   min-height: 100%;
-  background: #050505;
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  background: var(--p3-void);
+  font-family: var(--font-space);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,6 +53,7 @@ p {
 
 h1 {
   font-size: 56px;
+  font-weight: 700;
   letter-spacing: -1.68px;
   margin: 32px 0;
   @media (max-width: 1024px) {
@@ -45,6 +63,7 @@ h1 {
 }
 h2 {
   font-size: 24px;
+  font-weight: 700;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
@@ -58,15 +77,15 @@ p {
 
 code,
 .counter {
-  font-family: var(--mono);
+  font-family: var(--font-space);
   display: inline-flex;
   border-radius: 4px;
-  color: var(--text-h);
+  color: var(--p3-text);
 }
 
 code {
   font-size: 15px;
   line-height: 135%;
   padding: 4px 8px;
-  background: var(--code-bg);
+  background: var(--p3-panel-deep);
 }

@@ -1,4 +1,4 @@
-import { Section, Dot } from '../components/Shared'
+import { Section, DividerStrip, Dot } from '../components/Shared'
 import { EXPERIENCE, SKILLS } from '../data/portfolio'
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
               className="px-4 py-4 space-y-1"
               style={{
                 borderBottom: i < EXPERIENCE.length - 1
-                  ? '1px solid rgba(216,212,202,0.1)'
+                  ? '1px solid var(--p3-line-soft)'
                   : 'none',
               }}
             >
@@ -23,8 +23,8 @@ export default function Home() {
                   style={{
                     width: '24px',
                     height: '24px',
-                    background: 'rgba(216,212,202,0.12)',
-                    border: '1px solid rgba(216,212,202,0.25)',
+                    background: 'var(--p3-cyan-soft)',
+                    border: '1px solid var(--p3-line)',
                     fontSize: '11px',
                   }}
                 >
@@ -33,13 +33,13 @@ export default function Home() {
                 <div className="flex-1 min-w-0">
                   <p
                     className="font-medium leading-snug"
-                    style={{ color: 'rgba(225,222,214,0.9)' }}
+                    style={{ color: 'var(--p3-text)' }}
                   >
                     {exp.role}
                   </p>
                   <div
                     className="flex flex-wrap items-center gap-1.5 mt-0.5 text-xs"
-                    style={{ color: 'rgba(225,222,214,0.4)', fontVariantNumeric: 'tabular-nums' }}
+                    style={{ color: 'var(--p3-text-muted)', fontVariantNumeric: 'tabular-nums' }}
                   >
                     <span>{exp.company}</span>
                     <Dot />
@@ -51,7 +51,7 @@ export default function Home() {
                   </div>
                   <p
                     className="mt-2 text-sm leading-relaxed"
-                    style={{ color: 'rgba(225,222,214,0.55)' }}
+                    style={{ color: 'var(--p3-text-soft)' }}
                   >
                     {exp.desc}
                   </p>
@@ -62,29 +62,31 @@ export default function Home() {
         </div>
       </Section>
 
+      <DividerStrip />
+
       {/* SKILLS */}
       <Section title="Skills">
         <div className="px-4 py-4 space-y-4">
           {SKILLS.map(s => (
             <div key={s.label}>
               <div className="flex justify-between items-center mb-1.5">
-                <span className="text-sm font-medium" style={{ color: 'rgba(225,222,214,0.8)' }}>
+                <span className="text-sm font-medium" style={{ color: 'var(--p3-text)' }}>
                   {s.label}
                 </span>
-                <span className="text-xs font-mono" style={{ color: 'rgba(216,212,202,0.7)' }}>
+                <span className="text-xs font-mono" style={{ color: 'var(--p3-cyan)' }}>
                   {s.level}%
                 </span>
               </div>
               <div
                 className="h-1.5 rounded-full overflow-hidden"
-                style={{ background: 'rgba(216,212,202,0.12)' }}
+                style={{ background: 'var(--p3-cyan-soft)' }}
               >
                 <div
                   className="h-full rounded-full"
                   style={{
                     width: `${s.level}%`,
-                    background: 'linear-gradient(90deg,#77736c,#d8d4ca)',
-                    boxShadow: '0 0 8px rgba(216,212,202,0.5)',
+                    background: 'linear-gradient(90deg,#bcbcbc,#f5f5f2)',
+                    boxShadow: '0 0 8px var(--p3-glow)',
                   }}
                 />
               </div>
@@ -93,43 +95,61 @@ export default function Home() {
         </div>
       </Section>
 
+      <DividerStrip />
+
       {/* CONTACT */}
       <Section title="Get in touch">
-        <div className="px-4 py-6 space-y-4">
-          <p className="text-sm leading-relaxed" style={{ color: 'rgba(225,222,214,0.6)' }}>
-            Feel free to reach out — whether it's about a project,
-            collaboration, or just saying hi. I usually reply within a day.
-          </p>
-          <div className="space-y-2">
+        <div className="px-4 py-7 sm:px-5">
+          <div className="grid gap-7 sm:grid-cols-[1fr_auto] sm:items-end">
+            <div>
+              <p
+                className="text-xs uppercase tracking-[0.18em]"
+                style={{ color: 'var(--p3-text-muted)' }}
+              >
+                Open for collaboration
+              </p>
+              <p
+                className="mt-3 max-w-md text-lg leading-relaxed"
+                style={{ color: 'var(--p3-text)' }}
+              >
+                Have a thoughtful idea or a tricky interface to build? Let&apos;s make it feel alive.
+              </p>
+              <p className="mt-3 text-sm" style={{ color: 'var(--p3-text-muted)' }}>
+                Usually replies within a day.
+              </p>
+            </div>
+
+            <a
+              href="mailto:alfn@example.com"
+              className="group flex min-w-0 items-center justify-between gap-5 border-b-2 px-1 pb-3 text-sm transition-colors sm:min-w-[230px]"
+              style={{ borderColor: 'var(--p3-cyan)', color: 'var(--p3-text)' }}
+            >
+              <span className="truncate">alfn@example.com</span>
+              <span
+                aria-hidden="true"
+                className="text-lg transition-transform duration-200 group-hover:translate-x-1"
+                style={{ color: 'var(--p3-cyan)' }}
+              >
+                ↗
+              </span>
+            </a>
+          </div>
+
+          <div className="mt-8 grid gap-2 sm:grid-cols-2">
             {[
-              { label: 'Email',   value: 'alfn@example.com',   href: 'mailto:alfn@example.com' },
-              { label: 'GitHub',  value: 'github.com/alfnleywin', href: 'https://github.com' },
-              { label: 'Discord', value: '@alfnleywin',         href: '#' },
+              { label: 'GitHub', value: 'github.com/alfnleywin', href: 'https://github.com' },
+              { label: 'Discord', value: '@alfnleywin', href: '#' },
             ].map(c => (
               <a
                 key={c.label}
                 href={c.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between px-3 py-3 rounded-lg text-sm transition-all"
-                style={{
-                  background: 'rgba(216,212,202,0.06)',
-                  border: '1px solid rgba(216,212,202,0.15)',
-                  color: 'rgba(225,222,214,0.75)',
-                }}
-                onMouseEnter={e => {
-                  const el = e.currentTarget as HTMLAnchorElement
-                  el.style.background = 'rgba(216,212,202,0.12)'
-                  el.style.borderColor = 'rgba(216,212,202,0.35)'
-                }}
-                onMouseLeave={e => {
-                  const el = e.currentTarget as HTMLAnchorElement
-                  el.style.background = 'rgba(216,212,202,0.06)'
-                  el.style.borderColor = 'rgba(216,212,202,0.15)'
-                }}
+                target={c.href.startsWith('http') ? '_blank' : undefined}
+                rel={c.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="flex items-center justify-between border-t px-1 py-3 text-sm transition-colors hover:text-[var(--p3-cyan)]"
+                style={{ borderColor: 'var(--p3-line-soft)', color: 'var(--p3-text-soft)' }}
               >
-                <span style={{ color: 'rgba(225,222,214,0.4)' }}>{c.label}</span>
-                <span style={{ color: '#d8d4ca' }}>{c.value}</span>
+                <span style={{ color: 'var(--p3-text-muted)' }}>{c.label}</span>
+                <span>{c.value} ↗</span>
               </a>
             ))}
           </div>
