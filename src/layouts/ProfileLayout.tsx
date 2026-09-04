@@ -1,12 +1,36 @@
-import { Outlet } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import CRTWarp from '../components/CRTWarp'
 import ProfileHeader from '../components/ProfileHeader'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { DividerStrip } from '../components/Shared'
 
+import { PROJECTS } from '../data/portfolio'
 
 export default function ProfileLayout() {
+  const location = useLocation()
+
+  useEffect(() => {
+    const path = location.pathname.replace(/\/+$/, '') || '/'
+    let pageTitle: string
+
+    if (path === '/') {
+      pageTitle = 'Home'
+    } else if (path === '/projects') {
+      pageTitle = 'Projects'
+    } else if (path.startsWith('/projects/')) {
+      const slug = path.slice('/projects/'.length).toLowerCase()
+      const found = PROJECTS.find(p => p.slug.toLowerCase() === slug)
+      pageTitle = found ? found.name : '404'
+    } else if (path === '/blog') {
+      pageTitle = 'Blog'
+    } else {
+      pageTitle = '404'
+    }
+
+    document.title = `${pageTitle} • alifanO_x`
+  }, [location.pathname])
   return (
     <div className="relative min-h-screen text-white">
       <div className="fixed inset-0 z-0 pointer-events-none">

@@ -1,7 +1,7 @@
 import avatar from '../assets/Images/profile.jpg'
 import banner from '../assets/Images/banner/banner1.png'
 import { SOCIALS } from '../data/portfolio'
-import { BriefcaseIcon, MapPinIcon, GlobeIcon, GithubIcon, LinkedinIcon, InstagramIcon, EmailIcon } from './Shared'
+import { BriefcaseIcon, MapPinIcon, GithubIcon, LinkedinIcon, InstagramIcon, EmailIcon } from './Shared'
 
 const Icons: Record<string, React.FC> = {
   GithubIcon,
@@ -135,22 +135,12 @@ A passionate developer exploring the intersection of design and engineering. Cur
         >
           <span className="inline-flex items-center gap-1.5">
             <BriefcaseIcon />
-            Front-end Developer
+            Full-stack Developer
           </span>
           <span className="inline-flex items-center gap-1.5">
             <MapPinIcon />
             Indonesia
           </span>
-          <a
-            href="#"
-            className="inline-flex items-center gap-1.5 transition-colors"
-            style={{ color: 'var(--p3-text-muted)' }}
-            onMouseEnter={e => (e.currentTarget.style.color = 'var(--p3-cyan)')}
-            onMouseLeave={e => (e.currentTarget.style.color = 'var(--p3-text-muted)')}
-          >
-            <GlobeIcon />
-            alfnleywin.dev
-          </a>
         </div>
 
         {/* Social links */}

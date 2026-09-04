@@ -1,7 +1,7 @@
 import { Section } from '../../Shared'
 
 const CONTACTS = [
-  { label: 'GitHub', value: 'github.com/alfnleywin', href: 'https://github.com' },
+  { label: 'GitHub', value: 'alifanLeywin', href: 'https://github.com/alifanLeywin' },
   { label: 'Instagram', value: '@alfnleywinnn_', href: 'https://www.instagram.com/alfnleywinnn_/' },
 ]
 
@@ -18,11 +18,11 @@ export default function Contact() {
             <p className="mt-3 text-sm" style={{ color: 'var(--p3-text-muted)' }}>Usually replies within a day.</p>
           </div>
           <a
-            href="mailto:alfn@example.com"
+            href="mailto:alifanmunggaran16@gmail.com"
             className="group flex min-w-0 items-center justify-between gap-5 border-b-2 px-1 pb-3 text-sm transition-colors sm:min-w-[230px]"
             style={{ borderColor: 'var(--p3-cyan)', color: 'var(--p3-text)' }}
           >
-            <span className="truncate">alfn@example.com</span>
+            <span className="truncate">alifanmunggaran16@gmail.com</span>
             <span aria-hidden="true" className="text-lg transition-transform duration-200 group-hover:translate-x-1" style={{ color: 'var(--p3-cyan)' }}>↗</span>
           </a>
         </div>
