@@ -1,12 +1,12 @@
-import avatar from '../assets/Images/profile.jpeg'
-import banner from '../assets/banner.jpg'
+import avatar from '../assets/Images/profile.jpg'
+import banner from '../assets/Images/banner/banner1.png'
 import { SOCIALS } from '../data/portfolio'
-import { BriefcaseIcon, MapPinIcon, GlobeIcon, GithubIcon, LinkedinIcon, DiscordIcon, EmailIcon } from './Shared'
+import { BriefcaseIcon, MapPinIcon, GlobeIcon, GithubIcon, LinkedinIcon, InstagramIcon, EmailIcon } from './Shared'
 
 const Icons: Record<string, React.FC> = {
   GithubIcon,
   LinkedinIcon,
-  DiscordIcon,
+  InstagramIcon,
   EmailIcon,
 }
 
@@ -94,7 +94,7 @@ export default function ProfileHeader() {
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
             </svg>
-            <span>LOL</span>
+            <span>he/him</span>
           </div>
         </div>
 
@@ -124,9 +124,8 @@ export default function ProfileHeader() {
           className="leading-relaxed"
           style={{ fontSize: '15px', color: 'var(--p3-text)', maxWidth: '640px', marginTop: '32px' }}
         >
-          I'm a front-end developer based in Indonesia, passionate about building
-          beautiful, high-performance web experiences. I love creative coding,
-          WebGL shaders, and turning complex ideas into intuitive interfaces.
+          
+A passionate developer exploring the intersection of design and engineering. Currently focused on React, UI/UX, and creative animations.
         </p>
 
         {/* Meta row */}

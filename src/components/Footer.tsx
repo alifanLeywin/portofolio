@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import banner from '../assets/banner.jpg'
+import banner from '../assets/Gif/black-hole-vortex.gif'
 import { SOCIALS } from '../data/portfolio'
 
 const INDEX_LINKS = [

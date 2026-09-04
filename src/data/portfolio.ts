@@ -1,21 +1,21 @@
 export const EXPERIENCE = [
   {
     id: 'exp1',
-    company: 'Freelance',
+    company: 'PT. Mobidu Sinergi',
     role: 'Full-stack Developer',
-    type: 'Contract',
-    period: '2024 – Present',
-    duration: '2y',
-    desc: 'Building modern web applications with React, TypeScript, and various backend technologies for clients across Indonesia.',
+    location: 'Garut',
+    period: 'July 2025 – November 2025',
+    duration: '5 months',
+    desc: 'Designed and developed a scalable backend service for Generasi QR Code, a dynamic QR code generation and management system. Built an interactive dashboard to simplify user interaction with the system and API integration.',
   },
   {
     id: 'exp2',
-    company: 'Personal Projects',
-    role: 'Front-end Engineer',
-    type: 'Self-employed',
-    period: '2022 – 2024',
-    duration: '2y',
-    desc: 'Developed and shipped multiple open-source projects, exploring UI animations, shader programming, and creative coding.',
+    company: 'Nempo Garut',
+    role: 'Full-stack Developer',
+    location: 'Garut',
+    period: 'August 2025 – November 2025',
+    duration: '4 months',
+    desc: 'Built an administrative panel for Nempo Garut and developed a full-stack Superapps platform using React and Laravel.',
   },
 ]
 
@@ -40,18 +40,30 @@ export const PROJECTS = [
   },
 ]
 
-export const SKILLS = [
-  { label: 'React / Next.js', level: 92 },
-  { label: 'TypeScript', level: 88 },
-  { label: 'Node.js / Hono', level: 80 },
-  { label: 'Three.js / WebGL', level: 72 },
-  { label: 'Tailwind CSS', level: 90 },
-  { label: 'PostgreSQL', level: 75 },
+export const STACK_GROUPS = [
+  {
+    number: '01',
+    label: 'Frontend',
+    description: 'Interfaces, motion, and visual systems.',
+    tools: ['JavaScript', 'TypeScript', 'React.js', 'Tailwind CSS', 'Framer Motion & GSAP'],
+  },
+  {
+    number: '02',
+    label: 'Backend',
+    description: 'APIs, data, and application logic.',
+    tools: ['Node.js (Express/Hono)', 'Laravel (PHP)', 'PostgreSQL & MySQL', 'Prisma & Drizzle ORM'],
+  },
+  {
+    number: '03',
+    label: 'Tools / DevOps',
+    description: 'The tools that keep ideas moving.',
+    tools: ['VS Code', 'JetBrains', 'Postman', 'Git', 'GitHub', 'Vercel'],
+  },
 ]
 
 export const SOCIALS = [
-  { label: 'GitHub',   href: 'https://github.com',    iconName: 'GithubIcon' },
-  { label: 'LinkedIn', href: 'https://linkedin.com',  iconName: 'LinkedinIcon' },
-  { label: 'Discord',  href: '#',                     iconName: 'DiscordIcon' },
+  { label: 'GitHub',   href: 'https://github.com/alifanLeywin',    iconName: 'GithubIcon' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mochammad-alifan-568464355/',  iconName: 'LinkedinIcon' },
+  { label: 'Instagram', href: 'https://www.instagram.com/alfnleywinnn_/', iconName: 'InstagramIcon' },
   { label: 'Email',    href: 'mailto:alfn@example.com', iconName: 'EmailIcon' },
 ]
